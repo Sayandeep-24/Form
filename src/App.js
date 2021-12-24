@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    function submitHandler(event)
+    {
+      event.preventDefault();
+      if(event.target[0].value<1 || event.target[0].value>20)
+        alert("Error");
+      else
+       alert("No error");
+    }
+  
+    return (<div>
+      <form onSubmit={submitHandler}>
+        <input type='text'>
+        </input>
+        <input type="submit" value="Submit" />
+        </form>
+      </div>
+    );
 }
 
 export default App;
