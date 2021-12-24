@@ -18,7 +18,7 @@ function App() {
         </input>
         <input type="submit" value="Submit" />
         </form>
-        {error?<div>Error</div>:<div>No Error</div>}
+        {error?<div>Value is good</div>:<div>Enter new value</div>}
       </div>
     );
 }
